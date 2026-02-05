@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Employee Login Form</title>
+    <link rel="stylesheet" href="EmployeeLogin.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>HR Co</h1>
+        <h3>Enter your Employee login credentials</h3>
+
+        <form action="">
+            <label for="first">
+                Username:
+            </label>
+            <input type="text" id="first" name="first" 
+                placeholder="Enter your Username" pattern = "[a-z]+" title = "Name must contain only lowercase letters" required>
+
+            <label for="password">
+                Password:
+            </label>
+            <input type="password" id="password" name="password" 
+                placeholder="Enter your Password" required>
+
+            <div class="wrap">
+                <button type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
