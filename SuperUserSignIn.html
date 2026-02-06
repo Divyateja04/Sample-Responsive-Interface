@@ -4,90 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="SuperUserSignIn.css">
-    <! link from awesome fonts >
-    <link rel = "stylesheet" href = " https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" >
+    <!-- link from awesome fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Talent Bridge</title>
 </head>
 <body>
-    <div class="container" id = "container">
-        <! used for box shape containing form >
+    <div class="container" id="container">
+        <!-- used for box shape containing form -->
         <div class="form-container sign-up">
-            <! used for the form section >
-            <form>
+            <!-- Sign Up Form -->
+            <form action="superuser_register.php" method="POST">
                 <h1>Create Account </h1>
                 <div class="social-icon">
-                    <a href = "https://www.hrco.in/" class = "fa-brands fa-google"></a>
-                    <a href = "#" class = "fa-brands fa-facebook-f"></a>
-                    <a href = "https://www.linkedin.com/company/hrcoindia/" class = "fa-brands fa-linkedin-in"></a>
-                    <a href = "https://www.youtube.com/@hrcoindia1" class = "fa-brands fa-youtube"></a>
+                    <a href="https://www.hrco.in/" class="fa-brands fa-google"></a>
+                    <a href="#" class="fa-brands fa-facebook-f"></a>
+                    <a href="https://www.linkedin.com/company/hrcoindia/" class="fa-brands fa-linkedin-in"></a>
+                    <a href="https://www.youtube.com/@hrcoindia1" class="fa-brands fa-youtube"></a>
                 </div>
                 <span>or use your company email for registration</span>
-                <input type="text" 
-                placeholder="Use Name" pattern = "[a-z]+" title = "Name must contain only lowercase letters" required/>
-                <input type="email" 
-                placeholder="Email" />
-                <script>
-  function validateEmail() {
-    var email = document.getElementById("email").value;
-    if (email.includes("@")) {
-      alert("Valid email address!");
-    } else {
-      alert("Missing '@' in email address.");
-    }
-  }
-</script>
-
-                <input type="password" 
-                placeholder="Password" />
-                <!used for the input fields>
-                <button>Sign Up</button>
+                <input type="text" name="name" placeholder="Full Name" required/>
+                <input type="email" name="email" placeholder="Email" required/>
+                <input type="password" name="password" placeholder="Password (min 8 characters)" required/>
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required/>
+                <!-- used for the input fields -->
+                <button type="submit">Sign Up</button>
             </form>
         </div>
-
+        
         <div class="form-container sign-in">
-            <! used for the form section >
-            <form>
+            <!-- Sign In Form -->
+            <form action="superuser_login.php" method="POST">
                 <h1>Sign In </h1>
                 <div class="social-icon">
-                    <a href = "https://www.hrco.in/" class = "fa-brands fa-google"></a>
-                    <a href = "#" class = "fa-brands fa-facebook-f"></a>
-                    <a href = "https://www.linkedin.com/company/hrcoindia/" class = "fa-brands fa-linkedin-in"></a>
-                    <a href = "https://www.youtube.com/@hrcoindia1" class = "fa-brands fa-youtube"></a>
+                    <a href="https://www.hrco.in/" class="fa-brands fa-google"></a>
+                    <a href="#" class="fa-brands fa-facebook-f"></a>
+                    <a href="https://www.linkedin.com/company/hrcoindia/" class="fa-brands fa-linkedin-in"></a>
+                    <a href="https://www.youtube.com/@hrcoindia1" class="fa-brands fa-youtube"></a>
                 </div>
-                <span>Use company official email for regestration</span>
-                <input type="email" 
-                placeholder="Email" required/>
-                <script>
-  function validateEmail() {
-    var email = document.getElementById("email").value;
-    if (email.includes("@")) {
-      alert("Valid email address!");
-    } else {
-      alert("Missing '@' in email address.");
-    }
-  }
-</script>
-
-                <input type="password" 
-                placeholder="Password" />
+                <span>Use company official email for login</span>
+                <input type="email" name="email" placeholder="Email" required/>
+                <input type="password" name="password" placeholder="Password" required/>
                 <a href="#">Forgot your password?</a>
-                <!used for the input fields>
-                <button>Sign In</button>
+                <!-- used for the input fields -->
+                <button type="submit">Sign In</button>
             </form>
         </div> 
-    <div class="toggle-container">
-        <div class="toggle">
-            <div class="toggle-panel toggle-left">
-                <h1>Already have Account!</h1>
-                <p>Then Sign In Here..</p>
-                <button class = "hidden" id = "login">Sign In</button>
-            </div>
-            <div class="toggle-panel toggle-right">
-                <h1>
-                    First visit - Then Create Account Here!
-                </h1>
-                <p>Register with your  personal details to use all of site features</p>
-                <button class = "hidden" id = "register">Sign Up</button>
+
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Already have Account!</h1>
+                    <p>Then Sign In Here..</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>First visit - Then Create Account Here!</h1>
+                    <p>Register with your personal details to use all of site features</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
             </div>
         </div>
     </div>

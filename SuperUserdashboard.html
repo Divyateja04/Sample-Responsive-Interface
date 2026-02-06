@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Talent Bridge</title>
+    <link rel="stylesheet" href="SuperUserdashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <h1>Talent Bridge</h1>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#dashboard" class="active">Dashboard</a></li>
+                    <li><a href="#profile">My Profile</a></li>
+                    <li><a href="#jobs">Jobs</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-info">
+                <span id="userName" class="welcome-text">Welcome, User</span>
+                <a href="logout.php" class="logout-btn">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="welcome-card">
+                <div class="welcome-text-content">
+                    <h2>Welcome Back!</h2>
+                    <p id="userGreeting">Hello, User! 👋</p>
+                    <p class="subtitle">You're logged in to your Talent Bridge account</p>
+                </div>
+                <div class="welcome-icon">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Stats -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>Total Users</h3>
+                    <p class="stat-number">5</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-bookmark"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>Active Users</h3>
+                    <p class="stat-number">12</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>Inactive Users</h3>
+                    <p class="stat-number">8</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>Total Profiles Count</h3>
+                    <p class="stat-number">85%</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Applications -->
+        <section class="applications-section">
+            <h2>Recent Applications</h2>
+            <div class="applications-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Job Title</th>
+                            <th>Company</th>
+                            <th>Applied Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Senior Developer</td>
+                            <td>Tech Corp</td>
+                            <td>2026-02-05</td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>HR Manager</td>
+                            <td>HR Solutions</td>
+                            <td>2026-02-04</td>
+                            <td><span class="status accepted">Accepted</span></td>
+                        </tr>
+                        <tr>
+                            <td>Marketing Lead</td>
+                            <td>Digital Agency</td>
+                            <td>2026-02-03</td>
+                            <td><span class="status rejected">Rejected</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Recommended Jobs -->
+        <section class="recommended-section">
+            <h2>Recommended for You</h2>
+            <div class="job-cards">
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3>Full Stack Developer</h3>
+                        <button class="save-btn"><i class="fas fa-bookmark"></i></button>
+                    </div>
+                    <p class="company">StartUp Inc.</p>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Remote</p>
+                    <p class="salary"><i class="fas fa-rupee-sign"></i> 8 - 12 LPA</p>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3>Product Manager</h3>
+                        <button class="save-btn"><i class="fas fa-bookmark"></i></button>
+                    </div>
+                    <p class="company">Global Tech</p>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Bangalore</p>
+                    <p class="salary"><i class="fas fa-rupee-sign"></i> 12 - 18 LPA</p>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3>Data Analyst</h3>
+                        <button class="save-btn"><i class="fas fa-bookmark"></i></button>
+                    </div>
+                    <p class="company">Analytics Hub</p>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Pune</p>
+                    <p class="salary"><i class="fas fa-rupee-sign"></i> 6 - 10 LPA</p>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Talent Bridge. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </footer>
+
+    <script src="SuperUserdashboard.js"></script>
+</body>
+</html>
